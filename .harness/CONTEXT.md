@@ -7,8 +7,10 @@
 
 ## 2. Architecture & Tech Stack
 - **Architecture:** Pure static website with no backend, no runtime dependencies, and no build pipeline requirement.
-- **Deployable Directory:** `dist/` (contains `index.html`, `styles.css`, `app.js`, and `assets/`).
+- **Deployable Directory:** `dist/` (contains `index.html`, `styles.css`, `app.js`, `_headers`, and `assets/`).
 - **Core Principles:** Semantic HTML5, modern vanilla CSS (custom properties, flexbox/grid, responsive typography), and vanilla JavaScript (header scroll state, IntersectionObserver reveal, accessible project filtering, zero runtime dependencies).
+- **Typography & Local Assets:** Fonts (DM Mono, Manrope, Playfair Display) are self-hosted in `dist/assets/fonts/` with OFL licenses; all runtime third-party font requests to Google Fonts are removed.
+- **Security Headers:** Cloudflare Pages security headers configured via `dist/_headers` (strict CSP, `nosniff`, `no-referrer`, restrictive Permissions-Policy).
 - **Accessibility & Performance:** Semantic tags, ARIA attributes, full keyboard navigation, `prefers-reduced-motion` support, optimized WebP assets with explicit width and height attributes, zero render-blocking third-party scripts.
 
 ## 3. Selected Projects & Verified Claims
@@ -32,6 +34,7 @@
    - Guardrail: No external demo URL is published; rely only on verified product previews.
 
 ## 4. Privacy & Source of Truth Constraints
+- **Asset Sanitization:** Booking (contact phone number scrubbed) and AccessFlow (photographic avatar replaced with neutral AF mark) assets are sanitized across all reachable Git history.
 - **Personal Email:** Personal email addresses are strictly prohibited from Git history, repository files, and public metadata. All Git commits use GitHub noreply (`262843242+GarnikSacsha@users.noreply.github.com`).
 - **Local Reference Folders:** `Ref/` and `Review/` are local working artifacts only, ignored in `.gitignore`, and must never be tracked or published.
 - **Public URLs & Domains:** Canonical and Open Graph meta tags currently omit absolute URLs until a verified public custom domain / hosting URL is deployed.

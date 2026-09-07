@@ -53,8 +53,9 @@ The portfolio website is intentionally built without heavy frameworks or build r
 * **Vanilla CSS:** Dark-editorial design system, fluid typography (`clamp()`), and responsive layouts without CSS frameworks.
 * **Vanilla JavaScript:** Zero runtime dependencies; lightweight scroll, reveal, and filtering interactions.
 * **Accessibility & Focus:** Full keyboard navigation via Tab, clear `:focus-visible` states, and minimum 44px mobile touch targets.
-* **Motion Budget:** Microanimations restricted to key interactive elements, with full support for `prefers-reduced-motion: reduce`.
+* **Motion Budget:** Motion is limited to a small set of interactive and decorative elements, with full support for prefers-reduced-motion.
 * **Asset Optimization:** Next-generation WebP images (~89.5% weight reduction) with explicit dimensions that help prevent image-induced layout shifts and native `loading="lazy"`.
+* **Self-Hosted Typography:** Fonts (DM Mono, Manrope, Playfair Display) are served locally as optimized WOFF2 files with zero runtime requests to third-party CDNs; OFL license files are stored in `dist/assets/fonts/licenses/`.
 
 ---
 
@@ -89,12 +90,23 @@ http://localhost:8080
 │   ├── STATUS.md
 │   └── commands.md
 └── dist/
+    ├── _headers
     ├── app.js
     ├── index.html
     ├── styles.css
     └── assets/
         ├── favicon.svg
         ├── og-cover.png
+        ├── fonts/
+        │   ├── dm-mono-300-latin.woff2
+        │   ├── dm-mono-400-latin.woff2
+        │   ├── dm-mono-500-latin.woff2
+        │   ├── manrope-variable-latin.woff2
+        │   ├── playfair-display-italic-600-latin.woff2
+        │   └── licenses/
+        │       ├── DM-Mono-OFL.txt
+        │       ├── Manrope-OFL.txt
+        │       └── Playfair-Display-OFL.txt
         └── projects/
             ├── accessflow-bot.webp
             ├── accessflow-checkout.webp
@@ -109,10 +121,10 @@ http://localhost:8080
 
 ## Quality and Privacy
 
-* **Sanitized Materials:** All CRM dashboards, order flows, and Telegram bot screenshots are sanitized to remove visible personal, customer, payment, and credential data while preserving the product context shown in the portfolio.
+* **Sanitized Materials:** Current and reachable historical public assets are sanitized to remove visible personal, customer, payment, and credential data (including phone numbers and photographic avatars) while preserving product context.
 * **Local Reference Isolation:** Internal research files (`Ref/`) and review screenshots (`Review/`) remain local and are excluded from Git tracking via `.gitignore`.
 * **Zero Production Credentials:** No API keys, credentials, backend secrets, or personal emails are committed.
-* **Pre-deploy Verification:** A preliminary repository privacy and secret scan has passed. An independent Codex security review remains required before deployment.
+* **Pre-deploy Verification:** A preliminary repository privacy and secret scan has passed. An independent Codex security re-audit remains required following remediation, and deployment has not yet been performed.
 
 ---
 
