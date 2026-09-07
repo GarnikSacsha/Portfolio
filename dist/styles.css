@@ -23,7 +23,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -31,7 +30,11 @@ body {
   background: var(--ink);
   color: var(--paper);
   font-family: Manrope, Arial, sans-serif;
-  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid var(--acid);
+  outline-offset: 3px;
 }
 
 .grain {
@@ -58,6 +61,15 @@ body {
   background: linear-gradient(180deg, rgba(10, 11, 13, 0.94), rgba(10, 11, 13, 0));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+}
+
+.site-header.scrolled {
+  background: rgba(10, 11, 13, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .brand {
@@ -88,8 +100,10 @@ nav a {
   transition: color 0.2s ease;
 }
 
-nav a:hover {
-  color: var(--paper);
+@media (hover: hover) and (pointer: fine) {
+  nav a:hover {
+    color: var(--paper);
+  }
 }
 
 .nav-cta {
@@ -97,16 +111,24 @@ nav a:hover {
   padding: 11px 16px;
   border-radius: 999px;
   color: var(--acid);
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.nav-cta:hover {
-  background: var(--acid-dim);
-  color: var(--acid);
+@media (hover: hover) and (pointer: fine) {
+  .nav-cta:hover {
+    background: var(--acid-dim);
+    color: var(--acid);
+  }
+
+  .nav-cta:hover span {
+    transform: translate(2px, -2px);
+  }
 }
 
 .nav-cta span {
   margin-left: 8px;
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
 
 /* Hero */
@@ -133,6 +155,19 @@ nav a:hover {
   color: var(--acid);
 }
 
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 14px var(--acid), 0 0 3px var(--acid);
+  }
+  50% {
+    opacity: 0.62;
+    transform: scale(0.9);
+    box-shadow: 0 0 6px var(--acid);
+  }
+}
+
 .live-dot {
   display: inline-block;
   width: 7px;
@@ -141,6 +176,7 @@ nav a:hover {
   background: var(--acid);
   margin-right: 8px;
   box-shadow: 0 0 14px var(--acid);
+  animation: pulse-dot 2.6s ease-in-out infinite;
 }
 
 h1 {
@@ -173,6 +209,16 @@ h2 em {
   width: min(38vw, 550px);
   aspect-ratio: 1;
   justify-self: end;
+}
+
+.hero-orbit::before {
+  content: "";
+  position: absolute;
+  inset: 6%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 230, 118, 0.045) 0%, rgba(0, 230, 118, 0.01) 48%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .orbit {
@@ -241,6 +287,16 @@ h2 em {
   display: grid;
   place-items: center;
   background: #111;
+  transition: transform 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .node:hover {
+    transform: scale(1.1);
+    border-color: var(--acid);
+    color: var(--paper);
+    box-shadow: 0 0 16px rgba(0, 230, 118, 0.25);
+  }
 }
 
 .n1 { top: 4%; left: 48%; }
@@ -354,11 +410,20 @@ h2 {
   color: var(--muted);
   cursor: pointer;
   border-bottom: 1px solid transparent;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
-.filters button:hover {
-  color: var(--paper);
+@media (hover: hover) and (pointer: fine) {
+  .filters button:hover {
+    color: var(--paper);
+    transform: translateY(-1px);
+  }
+}
+
+.filters button:focus-visible {
+  outline: 2px solid var(--acid);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 .filters button.active {
@@ -401,12 +466,31 @@ h2 {
   overflow: hidden;
   border: 1px solid var(--line);
   background: #0d0f14;
-  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project:hover .project-visual {
-  transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.22);
+a.project-visual-link {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a.project-visual-link:focus-visible {
+  outline: 2px solid var(--acid);
+  outline-offset: 3px;
+  border-color: var(--acid);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a.project-visual-link:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.26);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+  }
+
+  a.project-visual-link:hover .project-img {
+    transform: scale(1.025);
+  }
 }
 
 .project-img {
@@ -415,10 +499,6 @@ h2 {
   object-fit: cover;
   display: block;
   transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.project:hover .project-img {
-  transform: scale(1.025);
 }
 
 /* Status Badges */
@@ -530,15 +610,28 @@ h2 {
   white-space: nowrap;
 }
 
-.project-cta:hover {
-  background: var(--acid-dim);
-  border-color: var(--acid);
-  color: var(--acid);
-  transform: translateY(-1px);
+@media (hover: hover) and (pointer: fine) {
+  .project-cta:hover {
+    background: var(--acid-dim);
+    border-color: var(--acid);
+    color: var(--acid);
+    transform: translateY(-1px);
+  }
+
+  .project-cta:hover span {
+    transform: translate(2px, -2px);
+  }
+}
+
+.project-cta:focus-visible {
+  outline: 2px solid var(--acid);
+  outline-offset: 3px;
 }
 
 .project-cta span {
   font-size: 12px;
+  display: inline-block;
+  transition: transform 0.2s ease;
 }
 
 /* 01 HoReCaFam — Engineering Passport Preview */
@@ -661,11 +754,6 @@ h2 {
   box-shadow: -10px 0 28px rgba(0, 0, 0, 0.65);
   overflow: hidden;
   z-index: 2;
-  transition: transform 0.4s ease;
-}
-
-.project:hover .layer-flow-wrap {
-  transform: translateY(-4px);
 }
 
 .layer-flow-img {
@@ -700,10 +788,6 @@ h2 {
   transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.project:hover .visual-checkout .checkout-img {
-  transform: scale(1.025);
-}
-
 .layer-bot-wrap {
   position: absolute;
   right: 18px;
@@ -716,11 +800,6 @@ h2 {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.65);
   overflow: hidden;
   z-index: 2;
-  transition: transform 0.4s ease;
-}
-
-.project:hover .layer-bot-wrap {
-  transform: translateY(-3px);
 }
 
 .layer-bot-img {
@@ -889,41 +968,67 @@ footer h2 em {
     height: 68px;
   }
 
+  .brand {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
   nav > a:not(.nav-cta) {
     display: none;
   }
 
+  .nav-cta {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 18px;
+  }
+
   .hero {
-    min-height: 780px;
-    padding-top: 125px;
+    min-height: 740px;
+    padding-top: 110px;
+    padding-bottom: 30px;
     align-items: start;
   }
 
   h1 {
     font-size: 17.5vw;
     line-height: 0.82;
-    margin-top: 45px;
+    margin-top: 36px;
+    margin-bottom: 24px;
   }
 
   .hero-note {
-    margin-top: 50px;
-    font-size: 16px;
+    margin-top: 24px;
+    font-size: 15px;
+    line-height: 1.55;
+    max-width: 310px;
   }
 
   .hero-orbit {
-    width: 330px;
-    right: -170px;
-    top: 48%;
+    position: absolute;
+    width: 200px;
+    right: -40px;
+    bottom: 50px;
+    top: auto;
+    opacity: 0.35;
+    pointer-events: none;
   }
 
   .hero-meta {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
 
   .hero-meta a {
     margin: 0;
     text-align: right;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   .statement {
@@ -942,11 +1047,27 @@ footer h2 em {
   .filters {
     margin-top: 32px;
     overflow-x: auto;
-    padding-bottom: 8px;
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .filters::-webkit-scrollbar {
+    display: none;
   }
 
   .filters button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 4px;
     white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .work {
@@ -990,8 +1111,11 @@ footer h2 em {
 
   .project-cta {
     width: 100%;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    padding: 10px 16px;
+    padding: 12px 16px;
   }
 
   .about {
@@ -1007,6 +1131,12 @@ footer h2 em {
     flex-wrap: wrap;
   }
 
+  .footer-row a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
   .footer-row span {
     width: 100%;
     margin: 20px 0 0;
@@ -1014,25 +1144,47 @@ footer h2 em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 
-  .orbit {
-    animation: none;
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  .orbit,
+  .live-dot {
+    animation: none !important;
   }
 
   .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 
-  .project:hover .project-visual,
-  .project:hover .project-img,
-  .project:hover .layer-flow-wrap,
-  .project:hover .layer-bot-wrap,
-  .project-cta:hover {
-    transform: none;
+  a.project-visual-link,
+  a.project-visual-link:hover,
+  a.project-visual-link .project-img,
+  a.project-visual-link:hover .project-img,
+  .project-cta,
+  .project-cta:hover,
+  .project-cta span,
+  .project-cta:hover span,
+  .nav-cta,
+  .nav-cta:hover,
+  .nav-cta span,
+  .nav-cta:hover span,
+  .filters button,
+  .filters button:hover,
+  .node,
+  .node:hover {
+    transform: none !important;
+    transition: none !important;
   }
 }

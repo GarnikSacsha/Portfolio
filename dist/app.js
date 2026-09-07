@@ -1,3 +1,12 @@
+const header = document.querySelector('.site-header');
+if (header) {
+  const updateHeader = () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  };
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  updateHeader();
+}
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
