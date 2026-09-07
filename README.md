@@ -51,10 +51,10 @@ The portfolio website is intentionally built without heavy frameworks or build r
 
 * **Semantic HTML5:** Clean structure, meaningful landmarks, accessible labels, and zero nested links.
 * **Vanilla CSS:** Dark-editorial design system, fluid typography (`clamp()`), and responsive layouts without CSS frameworks.
-* **Vanilla JavaScript:** Zero runtime dependencies; lightweight scroll and filter interactions under 1 KB.
+* **Vanilla JavaScript:** Zero runtime dependencies; lightweight scroll, reveal, and filtering interactions.
 * **Accessibility & Focus:** Full keyboard navigation via Tab, clear `:focus-visible` states, and minimum 44px mobile touch targets.
 * **Motion Budget:** Microanimations restricted to key interactive elements, with full support for `prefers-reduced-motion: reduce`.
-* **Asset Optimization:** Next-generation WebP images (~89.5% weight reduction) with explicit dimensions for zero layout shift (CLS) and native `loading="lazy"`.
+* **Asset Optimization:** Next-generation WebP images (~89.5% weight reduction) with explicit dimensions that help prevent image-induced layout shifts and native `loading="lazy"`.
 
 ---
 
@@ -109,10 +109,10 @@ http://localhost:8080
 
 ## Quality and Privacy
 
-* **Sanitized Materials:** All CRM dashboards, order flows, and Telegram bot screenshots are sanitized and stripped of private customer or business data.
+* **Sanitized Materials:** All CRM dashboards, order flows, and Telegram bot screenshots are sanitized to remove visible personal, customer, payment, and credential data while preserving the product context shown in the portfolio.
 * **Local Reference Isolation:** Internal research files (`Ref/`) and review screenshots (`Review/`) remain local and are excluded from Git tracking via `.gitignore`.
 * **Zero Production Credentials:** No API keys, credentials, backend secrets, or personal emails are committed.
-* **Pre-deploy Verification:** A dedicated security and privacy gate is completed prior to public deployment.
+* **Pre-deploy Verification:** A preliminary repository privacy and secret scan has passed. An independent Codex security review remains required before deployment.
 
 ---
 
