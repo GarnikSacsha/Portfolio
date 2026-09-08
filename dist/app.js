@@ -1,3 +1,5 @@
+document.documentElement.classList.replace('no-js', 'js');
+
 const header = document.querySelector('.site-header');
 if (header) {
   const updateHeader = () => {
