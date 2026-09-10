@@ -26,29 +26,34 @@
     <div class="grain" aria-hidden="true"></div>
 
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Denys Yefimenko, home">DENYS<span>.</span></a>
-      <nav aria-label="Main navigation">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="nav-cta">Let's talk <span>↗</span></a>
+      <a class="brand" href="#top" aria-label="Denys Yefimenko, home" data-i18n-aria="brand.aria">DENYS<span>.</span></a>
+      <nav aria-label="Main navigation" data-i18n-aria="nav.aria">
+        <a href="#work" data-i18n="nav.work">Work</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <div class="lang-switch" role="group" aria-label="Language selector" data-i18n-aria="lang.group_aria">
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true" aria-label="English">ENG</button>
+          <span class="lang-sep" aria-hidden="true">/</span>
+          <button type="button" class="lang-btn" data-lang="uk" aria-pressed="false" aria-label="Українська">УКР</button>
+        </div>
+        <a href="#contact" class="nav-cta"><span data-i18n="nav.cta">Let's talk</span> <span>↗</span></a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero">
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="live-dot"></span> AVAILABLE FOR SELECT PROJECTS</p>
+          <p class="eyebrow"><span class="live-dot"></span> <span data-i18n="hero.eyebrow">AVAILABLE FOR SELECT PROJECTS</span></p>
           <h1><em>AI PRODUCT</em><br />ENGINEER</h1>
-          <p class="hero-note">I turn messy business processes into products people can actually use — from first sketch to a working release.</p>
+          <p class="hero-note" data-i18n="hero.note">I turn messy business processes into products people can actually use — from first sketch to a working release.</p>
         </div>
 
         <div class="hero-orbit" aria-hidden="true">
           <div class="orbit orbit-one"></div>
           <div class="orbit orbit-two"></div>
           <div class="core">
-            <span>IDEA</span>
+            <span data-i18n="hero.core_idea">IDEA</span>
             <b>→</b>
-            <span>PRODUCT</span>
+            <span data-i18n="hero.core_product">PRODUCT</span>
           </div>
           <span class="node n1">AI</span>
           <span class="node n2">WEB</span>
@@ -57,106 +62,106 @@
         </div>
 
         <div class="hero-meta">
-          <span>Chernivtsi, Ukraine</span>
-          <span>Remote worldwide</span>
-          <a href="#work">Explore work ↓</a>
+          <span data-i18n="hero.meta_location">Chernivtsi, Ukraine</span>
+          <span data-i18n="hero.meta_remote">Remote worldwide</span>
+          <a href="#work" data-i18n="hero.meta_explore">Explore work ↓</a>
         </div>
       </section>
 
       <section class="statement reveal">
-        <p class="section-index">01 / APPROACH</p>
-        <p class="big-statement">Not “AI for the sake of AI.” I find the manual bottleneck, shape the flow, and build the smallest product that solves it.</p>
+        <p class="section-index" data-i18n="approach.index">01 / APPROACH</p>
+        <p class="big-statement" data-i18n="approach.statement">Not “AI for the sake of AI.” I find the manual bottleneck, shape the flow, and build the smallest product that solves it.</p>
         <div class="capabilities">
-          <span>AI AUTOMATION</span>
-          <span>PRODUCT PROTOTYPING</span>
-          <span>PYTHON BACKENDS</span>
-          <span>WEB EXPERIENCES</span>
-          <span>TELEGRAM BOTS</span>
+          <span data-i18n="approach.cap_1">AI AUTOMATION</span>
+          <span data-i18n="approach.cap_2">PRODUCT PROTOTYPING</span>
+          <span data-i18n="approach.cap_3">PYTHON BACKENDS</span>
+          <span data-i18n="approach.cap_4">WEB EXPERIENCES</span>
+          <span data-i18n="approach.cap_5">TELEGRAM BOTS</span>
         </div>
       </section>
 
       <section class="work" id="work">
         <div class="section-head reveal">
           <div>
-            <p class="section-index">02 / SELECTED WORK</p>
-            <h2>Built to work.<br /><em>Not just to impress.</em></h2>
+            <p class="section-index" data-i18n="work.index">02 / SELECTED WORK</p>
+            <h2><span data-i18n="work.title_main">Built to work.</span><br /><em data-i18n="work.title_accent">Not just to impress.</em></h2>
           </div>
-          <div class="filters" role="group" aria-label="Filter projects">
-            <button class="active" data-filter="all">ALL <sup>6</sup></button>
-            <button data-filter="launched">LAUNCHED <sup>2</sup></button>
-            <button data-filter="demo">PRODUCT DEMOS <sup>3</sup></button>
-            <button data-filter="development">IN DEVELOPMENT <sup>1</sup></button>
+          <div class="filters" role="group" aria-label="Filter projects" data-i18n-aria="filter.group_aria">
+            <button class="active" data-filter="all"><span data-i18n="filter.all">ALL</span> <sup>6</sup></button>
+            <button data-filter="launched"><span data-i18n="filter.launched">LAUNCHED</span> <sup>2</sup></button>
+            <button data-filter="demo"><span data-i18n="filter.demo">PRODUCT DEMOS</span> <sup>3</sup></button>
+            <button data-filter="development"><span data-i18n="filter.development">IN DEVELOPMENT</span> <sup>1</sup></button>
           </div>
         </div>
 
         <div class="project-grid">
           <article class="project reveal" data-status="development">
             <div class="project-visual visual-spec">
-              <span class="status">IN ACTIVE DEVELOPMENT</span>
+              <span class="status" data-i18n="status.development">IN ACTIVE DEVELOPMENT</span>
               <div class="spec-panel">
                 <div class="spec-header">
-                  <span class="spec-tag">ARCHITECTURE SPECIFICATION</span>
+                  <span class="spec-tag" data-i18n="spec.tag">ARCHITECTURE SPECIFICATION</span>
                   <span class="spec-id">HCF-LMS-2026</span>
                 </div>
                 <div class="spec-grid">
                   <div class="spec-item">
                     <span class="spec-val">6</span>
-                    <span class="spec-key">SECTIONS</span>
+                    <span class="spec-key" data-i18n="spec.sections">SECTIONS</span>
                   </div>
                   <div class="spec-item">
                     <span class="spec-val">32</span>
-                    <span class="spec-key">CATEGORIES</span>
+                    <span class="spec-key" data-i18n="spec.categories">CATEGORIES</span>
                   </div>
                   <div class="spec-item">
                     <span class="spec-val">308</span>
-                    <span class="spec-key">ACTIVE ITEMS</span>
+                    <span class="spec-key" data-i18n="spec.items">ACTIVE ITEMS</span>
                   </div>
                   <div class="spec-item">
                     <span class="spec-val">70%</span>
-                    <span class="spec-key">PASS THRESHOLD</span>
+                    <span class="spec-key" data-i18n="spec.pass">PASS THRESHOLD</span>
                   </div>
                 </div>
                 <div class="spec-footer">
-                  <span>PRACTICE UNLOCK: &gt;40%</span>
+                  <span data-i18n="spec.unlock">PRACTICE UNLOCK: &gt;40%</span>
                   <span class="spec-dot">•</span>
-                  <span>FINAL ASSESSMENT: 20 Q</span>
+                  <span data-i18n="spec.exam">FINAL ASSESSMENT: 20 Q</span>
                 </div>
               </div>
             </div>
             <div class="project-info">
               <div><p class="project-no">01</p><h3>HoReCaFam</h3></div>
-              <p>Staff training platform for restaurants and coffee shops. Invite-based learning, structured practice, exams, progress tracking, and content import.</p>
+              <p data-i18n="p1.desc">Staff training platform for restaurants and coffee shops. Invite-based learning, structured practice, exams, progress tracking, and content import.</p>
               <div class="project-scope">
-                <span class="scope-label">SCOPE</span>
-                <p class="scope-text">Training platform currently in development. This preview shows the verified catalog scope and designed system workflow; the complete user journey is not deployed yet.</p>
+                <span class="scope-label" data-i18n="case.scope">SCOPE</span>
+                <p class="scope-text" data-i18n="p1.scope_text">Training platform currently in development. This preview shows the verified catalog scope and designed system workflow; the complete user journey is not deployed yet.</p>
               </div>
               <div class="case-evidence">
                 <div class="case-impact">
-                  <span class="impact-label">IMPACT</span>
-                  <span class="impact-value">308 training items structured · 6 sections · 32 categories</span>
+                  <span class="impact-label" data-i18n="case.impact">IMPACT</span>
+                  <span class="impact-value" data-i18n="p1.impact_value">308 training items structured · 6 sections · 32 categories</span>
                 </div>
                 <div class="evidence-grid">
                   <div class="evidence-stage">
-                    <span class="evidence-label">PROBLEM</span>
-                    <p class="evidence-text">Staff onboarding and knowledge checks are difficult to standardize across roles and locations.</p>
+                    <span class="evidence-label" data-i18n="case.problem">PROBLEM</span>
+                    <p class="evidence-text" data-i18n="p1.problem_text">Staff onboarding and knowledge checks are difficult to standardize across roles and locations.</p>
                   </div>
                   <div class="evidence-stage evidence-stage-flow">
-                    <span class="evidence-label">AUTOMATED FLOW</span>
+                    <span class="evidence-label" data-i18n="case.flow">AUTOMATED FLOW</span>
                     <p class="evidence-flow">
-                      <span>Admin invite</span> <span class="flow-arrow" aria-hidden="true">→</span>
-                      <span>role and location</span> <span class="flow-arrow" aria-hidden="true">→</span>
-                      <span>training</span> <span class="flow-arrow" aria-hidden="true">→</span>
-                      <span>practice threshold</span> <span class="flow-arrow" aria-hidden="true">→</span>
-                      <span>20-question final exam</span> <span class="flow-arrow" aria-hidden="true">→</span>
-                      <span>progress result</span>
+                      <span data-i18n="p1.flow_1">Admin invite</span> <span class="flow-arrow" aria-hidden="true">→</span>
+                      <span data-i18n="p1.flow_2">role and location</span> <span class="flow-arrow" aria-hidden="true">→</span>
+                      <span data-i18n="p1.flow_3">training</span> <span class="flow-arrow" aria-hidden="true">→</span>
+                      <span data-i18n="p1.flow_4">practice threshold</span> <span class="flow-arrow" aria-hidden="true">→</span>
+                      <span data-i18n="p1.flow_5">20-question final exam</span> <span class="flow-arrow" aria-hidden="true">→</span>
+                      <span data-i18n="p1.flow_6">progress result</span>
                     </p>
                   </div>
                   <div class="evidence-stage">
-                    <span class="evidence-label">RESULT</span>
-                    <p class="evidence-text">One structured training pipeline designed to replace scattered documents and repeated manager explanations.</p>
+                    <span class="evidence-label" data-i18n="case.result">RESULT</span>
+                    <p class="evidence-text" data-i18n="p1.result_text">One structured training pipeline designed to replace scattered documents and repeated manager explanations.</p>
                   </div>
                 </div>
-                <div class="evidence-meta">System in development — impact reflects the structured catalog and designed workflow.</div>
+                <div class="evidence-meta" data-i18n="p1.meta">System in development — impact reflects the structured catalog and designed workflow.</div>
               </div>
               <div class="project-meta-row">
                 <ul><li>React</li><li>Python</li><li>PostgreSQL</li><li>Railway</li></ul>
@@ -165,103 +170,103 @@
           </article>
 
           <article class="project reveal" data-status="demo">
-            <a href="https://strata-ecommerce-demo-production.up.railway.app/" class="project-visual project-visual-link" target="_blank" rel="noreferrer" aria-label="STRATA / Bearka — view interactive prototype (opens in a new tab)">
-              <span class="status demo"><span class="status-full">INTERACTIVE PRODUCT DEMO</span><span class="status-short">PRODUCT DEMO</span></span>
-              <img src="./assets/projects/strata-catalog.webp" alt="STRATA / Bearka e-commerce catalog interface showing live product grid, filters, search, and footwear variants" class="project-img" width="1440" height="900" loading="lazy" decoding="async" />
+            <a href="https://strata-ecommerce-demo-production.up.railway.app/" class="project-visual project-visual-link" target="_blank" rel="noreferrer" aria-label="STRATA / Bearka — view interactive prototype (opens in a new tab)" data-i18n-aria="p2.aria_link">
+              <span class="status demo"><span class="status-full" data-i18n="status.demo_full">INTERACTIVE PRODUCT DEMO</span><span class="status-short" data-i18n="status.demo_short">PRODUCT DEMO</span></span>
+              <img src="./assets/projects/strata-catalog.webp" alt="STRATA / Bearka e-commerce catalog interface showing live product grid, filters, search, and footwear variants" data-i18n-alt="p2.alt" class="project-img" width="1440" height="900" loading="lazy" decoding="async" />
             </a>
             <div class="project-info">
               <div><p class="project-no">02</p><h3>STRATA / Bearka</h3></div>
-              <p>A premium e-commerce experience for a multi-store footwear business. Designed around a supplier catalogue of approximately 5,477 products.</p>
+              <p data-i18n="p2.desc">A premium e-commerce experience for a multi-store footwear business. Designed around a supplier catalogue of approximately 5,477 products.</p>
               <div class="project-scope">
-                <span class="scope-label">SCOPE</span>
-                <p class="scope-text">Interactive storefront prototype built to validate the catalog experience and client requirements. Live inventory, backend, checkout, payments and CRM integrations are not connected yet.</p>
+                <span class="scope-label" data-i18n="case.scope">SCOPE</span>
+                <p class="scope-text" data-i18n="p2.scope_text">Interactive storefront prototype built to validate the catalog experience and client requirements. Live inventory, backend, checkout, payments and CRM integrations are not connected yet.</p>
               </div>
               <div class="project-meta-row">
                 <ul><li>React</li><li>TypeScript</li><li>E-commerce</li><li>Integrations</li></ul>
-                <a href="https://strata-ecommerce-demo-production.up.railway.app/" class="project-cta" target="_blank" rel="noreferrer">View prototype <span>↗</span></a>
+                <a href="https://strata-ecommerce-demo-production.up.railway.app/" class="project-cta" target="_blank" rel="noreferrer"><span data-i18n="p2.cta">View prototype</span> <span>↗</span></a>
               </div>
             </div>
           </article>
 
           <article class="project reveal" data-status="demo">
-            <a href="https://frontend-staging-c899.up.railway.app/" class="project-visual project-visual-link" target="_blank" rel="noreferrer" aria-label="DZHERO — view interactive prototype (opens in a new tab)">
-              <span class="status demo"><span class="status-full">INTERACTIVE PRODUCT DEMO</span><span class="status-short">PRODUCT DEMO</span></span>
-              <img src="./assets/projects/dzhero-product.webp" alt="DZHERO AI-production pipeline interface showing viral signal analysis, brand tone adaptation, and scheduled content generation" class="project-img" width="1440" height="900" loading="lazy" decoding="async" />
+            <a href="https://frontend-staging-c899.up.railway.app/" class="project-visual project-visual-link" target="_blank" rel="noreferrer" aria-label="DZHERO — view interactive prototype (opens in a new tab)" data-i18n-aria="p3.aria_link">
+              <span class="status demo"><span class="status-full" data-i18n="status.demo_full">INTERACTIVE PRODUCT DEMO</span><span class="status-short" data-i18n="status.demo_short">PRODUCT DEMO</span></span>
+              <img src="./assets/projects/dzhero-product.webp" alt="DZHERO AI-production pipeline interface showing viral signal analysis, brand tone adaptation, and scheduled content generation" data-i18n-alt="p3.alt" class="project-img" width="1440" height="900" loading="lazy" decoding="async" />
             </a>
             <div class="project-info">
               <div><p class="project-no">03</p><h3>DZHERO</h3></div>
-              <p>AI-powered short-form content system that studies brand sources, finds video signals, generates scripts, and builds weekly content plans.</p>
+              <p data-i18n="p3.desc">AI-powered short-form content system that studies brand sources, finds video signals, generates scripts, and builds weekly content plans.</p>
               <div class="project-scope">
-                <span class="scope-label">SCOPE</span>
-                <p class="scope-text">Interactive frontend prototype demonstrating the planned product workflow. The AI content-processing pipeline is not connected in this public demo.</p>
+                <span class="scope-label" data-i18n="case.scope">SCOPE</span>
+                <p class="scope-text" data-i18n="p3.scope_text">Interactive frontend prototype demonstrating the planned product workflow. The AI content-processing pipeline is not connected in this public demo.</p>
               </div>
               <div class="project-meta-row">
                 <ul><li>LLM APIs</li><li>RAG</li><li>Python</li><li>React</li></ul>
-                <a href="https://frontend-staging-c899.up.railway.app/" class="project-cta" target="_blank" rel="noreferrer">View prototype <span>↗</span></a>
+                <a href="https://frontend-staging-c899.up.railway.app/" class="project-cta" target="_blank" rel="noreferrer"><span data-i18n="p3.cta">View prototype</span> <span>↗</span></a>
               </div>
             </div>
           </article>
 
           <article class="project reveal" data-status="demo">
-            <a href="https://booking-demo-production.up.railway.app/" class="project-visual project-visual-link" target="_blank" rel="noreferrer" aria-label="Booking Automation — view interactive demo (opens in a new tab)">
-              <span class="status demo"><span class="status-full">INTERACTIVE PRODUCT DEMO</span><span class="status-short">PRODUCT DEMO</span></span>
-              <img src="./assets/projects/booking-flow.webp" alt="Booking Automation availability calendar and real-time reservation calculation interface" class="project-img" width="1440" height="900" loading="lazy" decoding="async" />
+            <a href="https://booking-demo-production.up.railway.app/" class="project-visual project-visual-link" target="_blank" rel="noreferrer" aria-label="Booking Automation — view interactive demo (opens in a new tab)" data-i18n-aria="p4.aria_link">
+              <span class="status demo"><span class="status-full" data-i18n="status.demo_full">INTERACTIVE PRODUCT DEMO</span><span class="status-short" data-i18n="status.demo_short">PRODUCT DEMO</span></span>
+              <img src="./assets/projects/booking-flow.webp" alt="Booking Automation availability calendar and real-time reservation calculation interface" data-i18n-alt="p4.alt" class="project-img" width="1440" height="900" loading="lazy" decoding="async" />
             </a>
             <div class="project-info">
               <div><p class="project-no">04</p><h3>Booking Automation</h3></div>
-              <p>Direct-booking site and lightweight CRM for vacation-rental owners, with property-aware flows and a clean guest experience.</p>
+              <p data-i18n="p4.desc">Direct-booking site and lightweight CRM for vacation-rental owners, with property-aware flows and a clean guest experience.</p>
               <div class="project-scope">
-                <span class="scope-label">SCOPE</span>
-                <p class="scope-text">Interactive product demo with simulated booking and payment flows using local demo data. No live property, payment provider or production CRM is connected.</p>
+                <span class="scope-label" data-i18n="case.scope">SCOPE</span>
+                <p class="scope-text" data-i18n="p4.scope_text">Interactive product demo with simulated booking and payment flows using local demo data. No live property, payment provider or production CRM is connected.</p>
               </div>
               <div class="project-meta-row">
                 <ul><li>React</li><li>Multi-tenant</li><li>CRM</li><li>Railway</li></ul>
-                <a href="https://booking-demo-production.up.railway.app/" class="project-cta" target="_blank" rel="noreferrer">Open interactive demo <span>↗</span></a>
+                <a href="https://booking-demo-production.up.railway.app/" class="project-cta" target="_blank" rel="noreferrer"><span data-i18n="p4.cta">Open interactive demo</span> <span>↗</span></a>
               </div>
             </div>
           </article>
 
           <article class="project reveal" data-status="launched">
             <div class="project-visual visual-composite">
-              <span class="status launched status-on-light">LAUNCHED</span>
-              <img src="./assets/projects/mama-prybrala-start.webp" alt="Mama Prybrala Telegram cleaning order flow" class="project-img mama-main-img" width="640" height="800" loading="lazy" decoding="async" />
+              <span class="status launched status-on-light" data-i18n="status.launched">LAUNCHED</span>
+              <img src="./assets/projects/mama-prybrala-start.webp" alt="Mama Prybrala Telegram cleaning order flow" data-i18n-alt="p5.alt_start" class="project-img mama-main-img" width="640" height="800" loading="lazy" decoding="async" />
               <div class="layer-flow-wrap">
-                <img src="./assets/projects/mama-prybrala-booking-summary-sanitized.webp" alt="Sanitized structured booking summary generated by the cleaning bot" class="layer-flow-img" width="1122" height="1402" loading="lazy" decoding="async" />
+                <img src="./assets/projects/mama-prybrala-booking-summary-sanitized.webp" alt="Sanitized structured booking summary generated by the cleaning bot" data-i18n-alt="p5.alt_summary" class="layer-flow-img" width="1122" height="1402" loading="lazy" decoding="async" />
               </div>
             </div>
             <div class="project-info">
               <div><p class="project-no">05</p><h3>Mama Prybrala</h3></div>
-              <p>Telegram ordering automation for a cleaning service: pricing, lead collection, booking validation, admin notifications, and CRM sync.</p>
+              <p data-i18n="p5.desc">Telegram ordering automation for a cleaning service: pricing, lead collection, booking validation, admin notifications, and CRM sync.</p>
               <div class="project-scope">
-                <span class="scope-label">SCOPE</span>
-                <p class="scope-text">Launched Telegram automation used for a real cleaning-service workflow.</p>
+                <span class="scope-label" data-i18n="case.scope">SCOPE</span>
+                <p class="scope-text" data-i18n="p5.scope_text">Launched Telegram automation used for a real cleaning-service workflow.</p>
               </div>
               <div class="case-evidence">
                 <div class="case-impact">
-                  <span class="impact-label">IMPACT</span>
-                  <span class="impact-value">5 connected workflow stages · launched</span>
+                  <span class="impact-label" data-i18n="case.impact">IMPACT</span>
+                  <span class="impact-value" data-i18n="p5.impact_value">5 connected workflow stages · launched</span>
                 </div>
                 <div class="evidence-grid">
                   <div class="evidence-stage">
-                    <span class="evidence-label">PROBLEM</span>
-                    <p class="evidence-text">Every new request required the manager to clarify details, calculate a price, and transfer the information manually.</p>
+                    <span class="evidence-label" data-i18n="case.problem">PROBLEM</span>
+                    <p class="evidence-text" data-i18n="p5.problem_text">Every new request required the manager to clarify details, calculate a price, and transfer the information manually.</p>
                   </div>
                   <div class="evidence-stage evidence-stage-flow">
-                    <span class="evidence-label">AUTOMATED FLOW</span>
+                    <span class="evidence-label" data-i18n="case.flow">AUTOMATED FLOW</span>
                     <p class="evidence-flow">
-                      <span>Customer request</span> <span class="flow-arrow" aria-hidden="true">→</span>
-                      <span>service details</span> <span class="flow-arrow" aria-hidden="true">→</span>
-                      <span>price calculation</span> <span class="flow-arrow" aria-hidden="true">→</span>
-                      <span>booking validation</span> <span class="flow-arrow" aria-hidden="true">→</span>
-                      <span>structured manager handoff</span>
+                      <span data-i18n="p5.flow_1">Customer request</span> <span class="flow-arrow" aria-hidden="true">→</span>
+                      <span data-i18n="p5.flow_2">service details</span> <span class="flow-arrow" aria-hidden="true">→</span>
+                      <span data-i18n="p5.flow_3">price calculation</span> <span class="flow-arrow" aria-hidden="true">→</span>
+                      <span data-i18n="p5.flow_4">booking validation</span> <span class="flow-arrow" aria-hidden="true">→</span>
+                      <span data-i18n="p5.flow_5">structured manager handoff</span>
                     </p>
                   </div>
                   <div class="evidence-stage">
-                    <span class="evidence-label">RESULT</span>
-                    <p class="evidence-text">The customer receives an estimate inside Telegram, while the manager receives a structured lead ready for processing.</p>
+                    <span class="evidence-label" data-i18n="case.result">RESULT</span>
+                    <p class="evidence-text" data-i18n="p5.result_text">The customer receives an estimate inside Telegram, while the manager receives a structured lead ready for processing.</p>
                   </div>
                 </div>
-                <div class="evidence-meta">Telegram · Google Sheets · admin notifications · CRM handoff</div>
+                <div class="evidence-meta" data-i18n="p5.meta">Telegram · Google Sheets · admin notifications · CRM handoff</div>
               </div>
               <div class="project-meta-row">
                 <ul><li>Python</li><li>Aiogram</li><li>Google Sheets</li><li>PostgreSQL</li></ul>
@@ -271,47 +276,47 @@
 
           <article class="project reveal" data-status="launched">
             <div class="project-visual visual-checkout">
-              <span class="status launched">LAUNCHED</span>
+              <span class="status launched" data-i18n="status.launched">LAUNCHED</span>
               <div class="checkout-crop-wrapper">
-                <img src="./assets/projects/accessflow-checkout-sanitized.webp" alt="AccessFlow subscription checkout with payment plans" class="project-img checkout-img" width="1024" height="1536" loading="lazy" decoding="async" />
+                <img src="./assets/projects/accessflow-checkout-sanitized.webp" alt="AccessFlow subscription checkout with payment plans" data-i18n-alt="p6.alt_checkout" class="project-img checkout-img" width="1024" height="1536" loading="lazy" decoding="async" />
               </div>
               <div class="layer-bot-wrap">
-                <img src="./assets/projects/accessflow-bot-menu.webp" alt="AccessFlow launched Telegram bot menu" class="layer-bot-img" width="533" height="800" loading="lazy" decoding="async" />
+                <img src="./assets/projects/accessflow-bot-menu.webp" alt="AccessFlow launched Telegram bot menu" data-i18n-alt="p6.alt_menu" class="layer-bot-img" width="533" height="800" loading="lazy" decoding="async" />
               </div>
             </div>
             <div class="project-info">
               <div><p class="project-no">06</p><h3>AccessFlow</h3></div>
-              <p>Payment verification and timed access management for private Telegram communities, with secure invite links and automatic removal when the purchased period ends.</p>
+              <p data-i18n="p6.desc">Payment verification and timed access management for private Telegram communities, with secure invite links and automatic removal when the purchased period ends.</p>
               <div class="project-scope">
-                <span class="scope-label">SCOPE</span>
-                <p class="scope-text">Launched Telegram automation with payment verification, timed access and automatic removal after subscription expiry.</p>
+                <span class="scope-label" data-i18n="case.scope">SCOPE</span>
+                <p class="scope-text" data-i18n="p6.scope_text">Launched Telegram automation with payment verification, timed access and automatic removal after subscription expiry.</p>
               </div>
               <div class="case-evidence">
                 <div class="case-impact">
-                  <span class="impact-label">IMPACT</span>
-                  <span class="impact-value">Payment, access and expiry enforcement automated · launched</span>
+                  <span class="impact-label" data-i18n="case.impact">IMPACT</span>
+                  <span class="impact-value" data-i18n="p6.impact_value">Payment, access and expiry enforcement automated · launched</span>
                 </div>
                 <div class="evidence-grid">
                   <div class="evidence-stage">
-                    <span class="evidence-label">PROBLEM</span>
-                    <p class="evidence-text">Paid community access required manual payment checks, invite delivery, and removal of expired members.</p>
+                    <span class="evidence-label" data-i18n="case.problem">PROBLEM</span>
+                    <p class="evidence-text" data-i18n="p6.problem_text">Paid community access required manual payment checks, invite delivery, and removal of expired members.</p>
                   </div>
                   <div class="evidence-stage evidence-stage-flow">
-                    <span class="evidence-label">AUTOMATED FLOW</span>
+                    <span class="evidence-label" data-i18n="case.flow">AUTOMATED FLOW</span>
                     <p class="evidence-flow">
-                      <span>Selected plan</span> <span class="flow-arrow" aria-hidden="true">→</span>
-                      <span>payment verified</span> <span class="flow-arrow" aria-hidden="true">→</span>
-                      <span>secure invite</span> <span class="flow-arrow" aria-hidden="true">→</span>
-                      <span>timed access</span> <span class="flow-arrow" aria-hidden="true">→</span>
-                      <span>automatic removal at expiry</span>
+                      <span data-i18n="p6.flow_1">Selected plan</span> <span class="flow-arrow" aria-hidden="true">→</span>
+                      <span data-i18n="p6.flow_2">payment verified</span> <span class="flow-arrow" aria-hidden="true">→</span>
+                      <span data-i18n="p6.flow_3">secure invite</span> <span class="flow-arrow" aria-hidden="true">→</span>
+                      <span data-i18n="p6.flow_4">timed access</span> <span class="flow-arrow" aria-hidden="true">→</span>
+                      <span data-i18n="p6.flow_5">automatic removal at expiry</span>
                     </p>
                   </div>
                   <div class="evidence-stage">
-                    <span class="evidence-label">RESULT</span>
-                    <p class="evidence-text">The user receives access for the purchased period, while the bot automatically removes expired members without manual checks.</p>
+                    <span class="evidence-label" data-i18n="case.result">RESULT</span>
+                    <p class="evidence-text" data-i18n="p6.result_text">The user receives access for the purchased period, while the bot automatically removes expired members without manual checks.</p>
                   </div>
                 </div>
-                <div class="evidence-meta">Checkout · payment verification · Telegram access · expiry enforcement</div>
+                <div class="evidence-meta" data-i18n="p6.meta">Checkout · payment verification · Telegram access · expiry enforcement</div>
               </div>
               <div class="project-meta-row">
                 <ul><li>Python</li><li>FastAPI</li><li>Payments</li><li>Telegram</li></ul>
@@ -322,12 +327,12 @@
       </section>
 
       <section class="about" id="about">
-        <p class="section-index reveal">03 / ABOUT</p>
+        <p class="section-index reveal" data-i18n="about.index">03 / ABOUT</p>
         <div class="about-grid">
-          <h2 class="reveal">I build at the intersection of <em>product thinking</em> and engineering.</h2>
+          <h2 class="reveal"><span data-i18n="about.title_main">I build at the intersection of</span> <em data-i18n="about.title_accent">product thinking</em> <span data-i18n="about.title_end">and engineering.</span></h2>
           <div class="about-copy reveal">
-            <p>Before writing code, I spent more than three years inside an EdTech business — working with LMS, CRM integrations, feedback systems, and operational automations. That experience shaped how I build today: start with the real process, then choose the technology.</p>
-            <p>I use AI coding tools as part of the workflow, while keeping architecture, product decisions, verification, and the final result under deliberate control.</p>
+            <p data-i18n="about.p1">Before writing code, I spent more than three years inside an EdTech business — working with LMS, CRM integrations, feedback systems, and operational automations. That experience shaped how I build today: start with the real process, then choose the technology.</p>
+            <p data-i18n="about.p2">I use AI coding tools as part of the workflow, while keeping architecture, product decisions, verification, and the final result under deliberate control.</p>
             <div class="stack">
               <span>PYTHON</span><span>FASTAPI</span><span>REACT</span><span>TYPESCRIPT</span><span>POSTGRESQL</span><span>LLM APIs</span><span>RAILWAY</span><span>GIT</span>
             </div>
@@ -337,8 +342,8 @@
     </main>
 
     <footer id="contact">
-      <p class="section-index">04 / CONTACT</p>
-      <h2>Have a process that<br />should work <em>better?</em></h2>
+      <p class="section-index" data-i18n="contact.index">04 / CONTACT</p>
+      <h2><span data-i18n="contact.title_main">Have a process that</span><br /><span data-i18n="contact.title_sub">should work</span> <em data-i18n="contact.title_accent">better?</em></h2>
       <div class="footer-row">
         <a href="https://t.me/PackChoOi" target="_blank" rel="noreferrer">Telegram ↗</a>
         <a href="https://github.com/GarnikSacsha" target="_blank" rel="noreferrer">GitHub ↗</a>
